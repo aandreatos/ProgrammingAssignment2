@@ -1,6 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-
+## Programming Assignment 2: Lexical Scoping 
+## This R script contains two functions: makeCacheMatrix and cacheSolve
+## makeCacheMatrix takes a regular matrix and returns a set of 4 functions  
+## cacheSolve: if inverse exists in cache, this function returns it; else, calculates it 
+## In this Assignment we use the <<- operator which can be used to assign a value 
+## to an object in a (global) environment that is out of the current function environment.  
 
 # makeCacheMatrix takes a regular matrix and returns a set of 4 functions  
 # which allow the time-consuming inverse calculation to be cached
@@ -35,5 +38,13 @@ cacheSolve <- function(x) {
         x$setinv(inverse)  # save result in the cache
         inverse  # return inverse  
 } # END_cacheSolve 
+
+###################################################
+# Usage example:
+# x1 <- matrix(rnorm(100), 10, 10) #create 10x10 test matrix 
+# m1<- makeCacheMatrix(x1) # call makeCacheMatrix
+# cacheinv(m1) # first call of  cacheinv; eval. inv &store it
+# cacheinv(m1) # next calls retrieve inverse from cache
+###################################################
 
 

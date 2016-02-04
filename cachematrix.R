@@ -39,12 +39,11 @@ cacheSolve <- function(x) {
         inverse  # return inverse  
 } # END_cacheSolve 
 
-###################################################
+#################################################################
 # Usage example:
-# x1 <- matrix(rnorm(100), 10, 10) #create 10x10 test matrix 
+# x1 <- matrix(rnorm(100), 10, 10) # create 10x10 test matrix 
 # m1<- makeCacheMatrix(x1) # call makeCacheMatrix
-# cacheinv(m1) # first call of  cacheinv; eval. inv &store it
-# cacheinv(m1) # next calls retrieve inverse from cache
-###################################################
-
+# cacheSolve(m1) # first call of  cacheinv; eval. inv &store it
+# cacheSolve(m1) # next calls retrieve inverse from cache
+##################################################################
 
